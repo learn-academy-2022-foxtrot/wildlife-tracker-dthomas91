@@ -1,4 +1,5 @@
 class WildlivesController < ApplicationController
+
   def index
     wildlives = Wildlife.all
     render json: wildlives
@@ -42,4 +43,5 @@ class WildlivesController < ApplicationController
   def wildlife_params
     params.require(:wildlife).permit(:name, :scientific_binomial)
   end
+
 end
