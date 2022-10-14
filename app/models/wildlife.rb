@@ -1,3 +1,3 @@
 class Wildlife < ApplicationRecord
-  has_many :sighting 
+  has_many :sightings
 end
