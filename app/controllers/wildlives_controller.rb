@@ -4,10 +4,10 @@ class WildlivesController < ApplicationController
     wildlives = Wildlife.all
     render json: wildlives
   end
-
+  
   def show
-    wildlife = Wildlife.find(params[:id])
-    render json: wildlife
+    wildlife = Wildlife.find_by(id: params[:id])
+    render json: wildlife, include: [:sightings]
   end
 
   def create
